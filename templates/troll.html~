@@ -1,0 +1,20 @@
+<center>
+    <style>
+        body {
+            background-image: url('static/troll.jpeg');
+        }
+    </style> 
+
+    <h1>YOU HACK JUST GET HACKED !!!!</h1>
+    <!-- <img src="static/base_pic.svg" heigh = 600 /> -->
+    <!--
+    <img src="{{ href }}" heigh = 600 />
+    <form method="POST">
+        <label> Input a comma-separated list of age values :</label>
+        <input name="text"> 
+        <input type="submit">
+    </form>
+    <p>input values = {{ input }}</p>
+    <p>output values = {{ output }}</p>
+    -->
+</center>
